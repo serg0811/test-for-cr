@@ -133,6 +133,7 @@ type ClusterTemplateList struct {
 	Items           []ClusterTemplate `json:"items"`
 }
 
+// init registers the ClusterTemplate and ClusterTemplateList types with the scheme builder for Kubernetes API integration.
 func init() {
 	SchemeBuilder.Register(&ClusterTemplate{}, &ClusterTemplateList{})
 }
